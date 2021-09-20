@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>codeHive Registration</title>
+</head>
+<body>
+  {% extends 'base.html' %}
+  {% block content %}
+  <div id="formbody">
+    <div class="form">
+       <div style="display: flex;">
+      <img id="headerpic" src="https://shepherdexpress.com/downloads/48474/download/News_onlinecourses.jpg?cb=62787940c9e8f5158605c11a8138506d" width="30%" height="10%" alt="">
+      <h1 style=" font-weight: bold; font-size: 45px;color: purple;">codeHive<br> Student Registration</h1><hr>
+    </div>
+  
+
+   
+    <form  id="theform" method="POST"  enctype="multipart/form-data"  >
+     <p style="color: purple; font-size: 19px;"> Edit Registration Information:</p> <hr>
+      {{ form.as_p }}
+      {% csrf_token %}
+       <button  type="submit" 
+        style="background-color: purple; 
+        color: white;width: 100%;
+        height: 40px;
+         border-radius: 10px; 
+         font-family: 'Montserrat', sans-serif;
+         font-size: 20px;
+         font-weight: bold;">
+         SUBMIT</button>
+    </form>
+</div>
+</div>
+      <style>
+        #headerpic{
+          
+          margin-left: -3%;
+          margin-top: 10%;
+        }
+      
+       
+        .pic{
+          margin-bottom: -7%;
+          width: 40%;
+        }
+        select{
+           width: 80%;
+           border: 1px solid purple ;
+           font-size: 15px;
+           padding: 8px 10px;
+           border-radius: 5px; 
+       }
+          
+          h1{
+            font-family: 'Montserrat', sans-serif;
+            margin-top: 12%;
+           
+          
+          }
+          .form{
+            font-weight: bold;
+            margin:1% auto 0 auto;
+            padding:10px;
+            width:800px;
+            height:auto;
+            overflow:hidden;
+            border-radius:10px;
+            font-weight: bolder;
+            font-family: 'Montserrat', sans-serif;
+           
+            
+            
+          }
+          input{
+           width: 98%;
+           outline: none;
+           border: 1px solid purple ;
+           font-size: 15px;
+           padding: 6px 10px;
+           border-radius: 5px; 
+           font-weight: bold;
+          
+       }
+       
+       #nationality{
+        background-color: white;
+        width: 98.5%;
+
+       }
+       #gender{
+        background-color: white;
+        width: 98.5%;
+
+       }
+       #formbody{
+         
+    
+         width: 75%;
+         background-color: white;
+         border-radius:20px ;
+         margin-left: 11%;
+      
+         
+         
+       }
+       
+
+
+
+       
+      </style>
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+  {% endblock content %}
+</div>
+</body>
+</html>

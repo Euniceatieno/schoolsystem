@@ -1,0 +1,101 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+    <title>codeHive Registration</title>
+</head>
+<body>
+  {% extends 'base.html' %}
+
+  {% block content %}
+  
+
+  
+  <div id="formbody">
+  <div id="imgname">
+    
+    
+
+  <h1 style="margin-left: 15%; font-weight: bold; font-family: 'Montserrat', sans-serif;
+  margin-top: -3%;font-size: 45px;color: purple;">
+  Welcome to codeHive</h1>
+  <img id="courses" src="https://www.alshafak.com/wp-content/uploads/2021/03/32.jpeg">
+ 
+</div>
+
+    <div class="form" style="margin-left: 10%; margin-top: 13%;">
+     
+   
+    
+      <h1 style="font-weight: bold; font-family: 'Montserrat', sans-serif;
+      margin-top: -3%; font-size: 25px;color: rgb(46, 9, 106);">View Registered Entities:</h1>
+      
+     <h1><a id="link" href="{% url 'student:student_list' %}"> {{ students }} codeHive Students </a></h1>
+     <h1><a id="link" href="{% url 'trainer:trainer_list' %}">{{ trainers }} codeHive Trainers</a></h1>
+     <h1><a id="link" href="{% url 'course:course_list' %}">{{ courses }} codeHive Courses</a></h1>
+     <h1><a id="link" href="{% url 'events:calendar' %}">{{ events }} codeHive Events</a></h1>
+     
+  
+</div>
+</div>
+      <style>
+     
+       
+
+          #link{
+           
+         padding: 10px;
+         background-color: purple;
+         color: white;
+         height: 40px;
+         width: 300px;
+         border-radius: 10px; 
+         margin-left: 20%;
+         margin-top: 10%;
+         font-size: 20px;
+         font-weight: bold;
+         text-decoration: none;
+         font-family: 'Montserrat', sans-serif;
+       
+         
+          }
+        #courses{
+          width: 120%;
+          margin-top: -2%;
+        
+          
+        }
+        
+        #formbody{
+         
+          display: flex;
+          width: 95%;
+          background-color: white;
+          border-radius:20px ;
+          margin-left: 2.5%;
+          
+       
+          
+          
+        }
+        #imgname{
+          margin-left: 3%;
+          margin-top: 3%;
+        }
+        
+     
+         
+      </style>
+       {% endblock content %}
+</body>
+</html>
+

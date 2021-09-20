@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+    <title>codeHive Registration</title>
+</head>
+<body style="background-color: rgb(211, 209, 209);">
+    <div class="form">
+      <img class = "pic" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAriIaiHNiXxhv7x1m99_HC9s55DEELgOHPEobCvdI3OFyx5LGDE0EHUZf3WG5cdvMh6A&usqp=CAU">
+    <h1 style="font-size: 40px;color: purple;">codeHive<br> Trainer Registration</h1>
+    <hr>
+   
+    <form method="POST" enctype="multipart/form-data"  >
+      {{ form.as_p }}
+      {% csrf_token %}
+        <button type="submit" 
+        style="background-color: purple; 
+        color: white;width: 30%;
+        height: 40px;
+         border-radius: 10px; 
+         font-family: 'Montserrat', sans-serif;
+         font-size: 20px;
+         font-weight: bold;">
+         SUBMIT</button>
+    </form>
+   
+     
+   
+</div>
+      <style>
+        
+        .pic{
+          width: 40%;
+          margin-bottom: -2%;
+        }
+        
+          body{
+        margin:0;
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        font-size:15px;
+        background:#fcfcfc;
+        background-repeat: no-repeat;
+          }
+          h1{
+          font-family: 'Montserrat', sans-serif;
+          padding-top: 12px;
+          }
+          .form{
+            margin:4% auto 0 auto;
+            padding:30px;
+            width:700px;
+            height:auto;
+            overflow:hidden;
+            background:#fcfafb;
+            border-radius:20px; 
+          }
+          .form_control{
+           width: 98%;
+           outline: none;
+           border: 2px solid rgb(99, 51, 99) ;
+           font-size: 13px;
+           padding: 8px 10px;
+           border-radius: 5px;  
+           font-family: 'Montserrat', sans-serif;
+           font-weight: bold; 
+           display: flex;  
+       }
+       #gender{
+         background-color: white;
+         width: 102%;
+         height: auto;
+       }
+     
+      </style>
+      
+</body>
+</html>

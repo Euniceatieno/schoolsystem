@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+    <title>codeHive Registration</title>
+</head>
+<body>
+  {% extends 'base.html'%}
+  {% block content %}
+  <div id="formbody" >
+  <div id="imgname">
+  <h1 style="font-size: 45px;color: purple;;">codeHive<br>Course Form</h1>
+  <img id="courses" src="https://cdn.dribbble.com/users/508588/screenshots/11263679/thg_m78_05_4x.jpg">
+ 
+</div>
+    <div class="form">
+     
+   
+    <form method="POST" enctype="multipart/form-data" >
+      <h1 style="font-size: 20px;color: purple;margin-top: 0.5%;">Fill in the form to register a course:</h1>
+      {{ form.as_p }}
+      {% csrf_token %}
+      
+     
+        <button type="submit" 
+        style="background-color: purple; 
+        color: white;width: 95%;
+        height: 40px;
+         border-radius: 10px; 
+         font-family: 'Montserrat', sans-serif;
+         font-size: 20px;
+         font-weight: bold;
+         ">
+         SUBMIT</button>
+    </form>
+</div>
+</div>
+      <style>
+        #courses{
+          width: 90%;
+          
+         
+          height: 70%;
+        }
+        
+        #formbody{
+         display: flex;
+         width: 75%;
+         background-color: white;
+         border-radius:20px ;
+         margin-left: 11%; 
+       }
+        #imgname{
+          margin-left: 3%;
+          margin-top: 3%;
+        }  
+        h1{
+          
+          font-family: 'Montserrat', sans-serif;
+          margin-top: 0.5%;
+          padding-bottom: 20px;
+          font-weight: bold;
+          }
+          .form{
+            font-family: 'Montserrat', sans-serif;
+            font-weight: bolder;
+            font-size: 15px;
+            padding:30px;
+            width:1700px;
+            height:30%;
+            overflow:hidden;
+            color: rgb(29, 2, 29);
+            border-radius:20px;
+          }
+          .form_control{
+           width: 95%;
+           outline: none;
+           border: 1px solid rgb(121, 83, 121) ;
+           font-size: 13px;
+           padding: 7px 10px;
+           border-radius: 5px;  
+           font-family: 'Montserrat', sans-serif;
+           font-weight: bold;
+           display: flex;  
+           
+       }
+       #des{
+         height: 70px;
+       }
+     
+       
+      </style>
+        {% endblock content %}
+</body>
+</html>

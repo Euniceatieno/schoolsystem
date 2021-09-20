@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+    <title>codeHive Registration</title>
+</head>
+<body>
+  {% extends 'base.html' %}
+  {% block content %}
+  <div id="formbody">
+    <div class="form">
+      <div style="display: flex;">
+        <img id="headerpic" src="https://media.istockphoto.com/vectors/female-teacher-with-books-and-chalkboard-concept-illustration-for-vector-id1171911961?k=20&m=1171911961&s=612x612&w=0&h=hkvQDT55FFeMiI7w-hjoUp_MkbDupxEaLEypzdLZ4qc=" width="20%" height="10%" alt="">
+        <h1 style=" font-weight: bold; font-size: 45px;color: purple;">codeHive<br> Trainer Registration</h1>
+      </div>
+      <p style="color: purple; font-size: 19px;"> Fill in the form to register:</p> <hr>
+   
+    <form method="POST" enctype="multipart/form-data"  >
+      {{ form.as_p }}
+      {% csrf_token %}
+        <button type="submit" 
+        style="background-color: purple; 
+        color: white;
+        width: 98%;
+        height: 40px;
+         border-radius: 10px; 
+         font-family: 'Montserrat', sans-serif;
+         font-size: 20px;
+         font-weight: bold;">
+         SUBMIT</button>
+    </form>
+   
+     
+   
+</div>
+</div>
+      <style>
+       
+          #formbody{
+           
+         display: flex;
+         width: 75%;
+         background-color: white;
+         border-radius:20px ;
+        margin-left: 11%; 
+       } 
+       
+        
+        .pic{
+          width: 40%;
+          margin-bottom: -2%;
+        }
+        
+           body{
+       
+        font-weight: bold;
+        font-family: 'Montserrat', sans-serif;
+        font-size:15px;
+      
+        background-repeat: no-repeat;
+          }
+          h1{
+          font-family: 'Montserrat', sans-serif;
+          margin-top: 4%;
+          }
+          .form{
+            margin:4% auto 0 auto;
+            padding:30px;
+            width:800px;
+            height:auto;
+            overflow:hidden;
+           
+            border-radius:20px; 
+          }
+          .form_control{
+           width: 98%;
+           outline: none;
+           border: 2px solid rgb(99, 51, 99) ;
+           font-size: 13px;
+           padding: 8px 10px;
+           border-radius: 5px;  
+           font-family: 'Montserrat', sans-serif;
+           font-weight: bold; 
+           display: flex;  
+       }
+       #gender{
+         background-color: white;
+         width: 98%;
+         height: auto;
+       }
+     
+      </style>
+    {% endblock content %}    
+</body>
+</html>

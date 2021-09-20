@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: rgb(211, 209, 209);">
+
+{% block content %}
+<div id="formbody">
+  <h1 style="padding: 30px; margin-left: 5%;color: purple;font-size: 30px;margin-top: 1%;font-family: 'Montserrat', sans-serif;">CODEHIVE 2021 EVENTS CALENDER</h1>
+
+<div class="clearfix">
+	<a id="prev" href="{% url 'events:calendar' %}?{{ prev_month }}"> Previous Month </a>
+	<a id="next" href="{% url 'events:calendar' %}?{{ next_month }}"> Next Month </a>
+</div>
+
+{{ calendar }}
+
+
+</div>
+<style>
+  #next{
+    float: right;
+    padding: 10px;
+    margin-right: 1%;
+    background-color: rgb(166, 225, 248);
+   
+    color: rgb(4, 5, 68);
+    margin-bottom: 1%;
+    border-radius: 10px;
+    text-decoration: none;
+
+  }
+   #formbody{
+     width: 95%;
+     background-color: white;
+     border-radius:20px ;
+     margin-left: 2.5%; 
+       }
+  #prev{
+    float: right;
+    padding: 10px;
+    margin-right: 5%;
+    background-color: rgb(166, 225, 248);
+    margin-bottom: 1%;
+    border-radius: 10px;
+    color: rgb(4, 5, 68);
+ 
+
+    text-decoration: none;
+  }
+ 
+    .calendar {
+      width: 90%;
+    
+      font-size: 13px;
+      color: rgb(129, 6, 113);
+      margin-left: 5%;
+    }
+    .calendar tr, .calendar td {
+      border: 2px solid rgb(1, 14, 48);
+      border-radius: 5px;
+    }
+    
+    .calendar th {
+      padding: 10px;
+      text-align: center;
+      font-size: 18px;
+    }
+    
+    .calendar td {
+      width: 200px;
+      height: 100px;
+      padding: 20px 10px 0px 5px;
+    }
+    
+    .month {
+      font-size: 35px;
+      color: rgb(3, 8, 83);
+    }
+    
+    .date {
+      font-size: 16px;
+      color:purple;
+   
+    }
+    
+    ul {
+      height: 100%;
+      padding: 5px 5px 0px 20px;
+    }
+    
+    a {
+      color: #4b0452;
+    }
+   
+  </style>
+ {% endblock %}   
+</body>
+</html>
+
