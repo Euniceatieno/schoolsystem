@@ -1,4 +1,4 @@
-apturl==0.5.2
+
 asgiref==3.3.4
 awscli==1.18.111
 bcrypt==3.1.7
