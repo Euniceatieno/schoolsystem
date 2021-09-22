@@ -28,7 +28,6 @@ httplib2==0.18.1
 idna==2.10
 jeepney==0.4.3
 jmespath==0.10.0
-kazam==1.4.5
 keyring==21.3.0
 language-selector==0.1
 launchpadlib==1.10.13
