@@ -24,7 +24,6 @@ docutils==0.16
 fasteners==0.14.1
 future==0.18.2
 gunicorn==20.0.4
-gyp==0.1
 httplib2==0.18.1
 idna==2.10
 jeepney==0.4.3
